@@ -1,0 +1,65 @@
+document.querySelector('#data_form').addEventListener('click', function (event) {
+    event.preventDefault();
+});
+
+
+function calc() {
+    const maxTmiha = document.getElementById("max_tmiha").value;
+
+    const selfIncome = document.getElementById("self_income").value;
+
+    let peilutCost
+    if (document.getElementById("alut_nitmehet").value !== "") {
+        peilutCost = document.getElementById("alut_nitmehet").value;
+    } else {
+        peilutCost = selfIncome / (100 - maxTmiha);
+    }
+
+    let approvedSum
+    if (document.getElementById("approved_sum").value !== "") {
+        approvedSum = document.getElementById("approved_sum").value
+    } else {
+        approvedSum = peilutCost * maxTmiha
+    }
+
+    const officeSupport = approvedSum / peilutCost
+
+    const totalSelfIncome = 0
+
+    let alutPeilut
+    if (document.getElementById("alut_peilut").value !== "") {
+        alutPeilut = document.getElementById("alut_peilut").value
+    } else {
+        alutPeilut = peilutCost
+    }
+    let approved
+    if (document.getElementById("approved").value !== "") {
+        approved = document.getElementById("approved").value
+    } else {
+        approved = approvedSum
+    }
+
+    // const costTenPercent = peilutCost * 0.1
+    const selfIncomeSeventyFive = selfIncome * 0.75
+    const maxPeilutCostToApprove = selfIncomeSeventyFive * 10
+    const maxTmihaCash = maxPeilutCostToApprove * 0.9
+
+    if (approvedSum > maxTmihaCash) {
+        document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה:" + maxTmihaCash
+    } else {
+        document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה:" + approvedSum
+
+    }
+    console.log("maxTmiha " +  maxTmiha)
+    console.log("selfIncome " +  selfIncome)
+    console.log("peilutCost " +  peilutCost)
+    console.log("approvedSum " +  approvedSum)
+    console.log("officeSupport " +  officeSupport)
+    console.log("alutPeilut " +  alutPeilut)
+    console.log("approved " +  approved)
+    console.log("selfIncomeSeventyFive " +  selfIncomeSeventyFive)
+    console.log("maxPeilutCostToApprove " +  maxPeilutCostToApprove)
+    console.log("maxTmihaCash " +  maxTmihaCash)
+
+
+}
