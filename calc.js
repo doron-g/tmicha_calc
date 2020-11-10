@@ -52,7 +52,7 @@ function calc() {
         }
 
     }
-    document.getElementById("drishat_mekorot").innerText = drishatMekorot
+    document.getElementById("drishat_mekorot").innerText =  '2. המוסד עמד בדרישת המקורות העצמיים בשנה קודמת' + ":" + drishatMekorot
     const selfIncomeSeventyFive =  selfIncome * 0.75
     const maxPeilutCostToApprove =  selfIncomeSeventyFive * 10
     const maxTmihaCash = maxPeilutCostToApprove * 0.9
@@ -67,7 +67,7 @@ function calc() {
             tmihaMugbelet = 'מוגבל ע"י שיעור התמיכה המירבי'
         }
     }
-    document.getElementById("tmiha_mugbelet").innerText = tmihaMugbelet
+    document.getElementById("tmiha_mugbelet").innerText = '3. סכום התמיכה אינו מוגבל ע"י שיעור התמיכה המירבי כפי שייבדק להלן' + ':' + tmihaMugbelet
     const costTenPercent =  Math.round(alutPeilut * 0.1).toLocaleString()
 
 
@@ -88,6 +88,8 @@ function calc() {
     document.getElementById("max_tmiha_ninty_percent").innerText = " שיעור התמיכה המירבי שיוכר ע\"י המשרד יהיה 90% מעלות הפעילות המוכרת " + Math.round(maxTmihaCash).toLocaleString()
 
     document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה: " + finalSum
+
+
 
     console.log("maxTmiha " + maxTmiha)
     console.log("selfIncome " + selfIncome)

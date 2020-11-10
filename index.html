@@ -2,7 +2,7 @@
 <html dir="rtl" lang="he">
 <head>
     <meta charset="UTF-8">
-    <title>מחשבון תמיכה</title>
+    <title>מחשבון תמיכה ללא הצגת מקורות עצמיים</title>
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
           integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
     <style>
@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-<h1>תמיכה בשנת 2020 ללא הצגת מקורות עצמיים</h1>
+<h1>מחשבון תמיכה בשנת 2020 ללא הצגת מקורות עצמיים</h1>
 <h2>המחשבון בודק לפי התיקון לנוהל - מהו שיעור התמיכה המירבי לשנת 2020 בהתאם למקורות העצמיים שהוצגו בשנה הקודמת והאם המוסד יוכל לקבל את מלוא הסכום שאושר לו גם ללא הצגת מקורות עצמיים בשנה זו.</h2>
 <h2>הנחיות:</h2>
 <h3>יש למלא את הנתונים בתאים הריקים - בתחילה לגבי שנת הפעילות הקודמת ולאחר מכן לגבי שנת 2020.
@@ -191,12 +191,11 @@
 
 
         <p id="office_support">שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת היה:</p>
-        <input type="submit" onclick="calc()" id="send_data">
-        <input type="button" onclick="resetForm()" value="נקה נתונים">
 
-</div>
 
-<div>
+
+
+
     <p>נתונים לגבי שנת התמיכה הזו (2020) למוסד ציבור שלא מציג מקורות עצמיים</p>
     <p>סך המקורות העצמיים שהציג מוסד הציבור הם 0 ₪</p>
     <label for="alut_peilut">עלות הפעילות הנתמכת ב2020 כפי שהוגשה ע"י מוסד הציבור היא(אם ריק אז הנתון יימשך מהשנה
@@ -204,19 +203,19 @@
     <input type="number" id="alut_peilut" min="0"> </br>
     <div>
         <label for="approved">הסכום שאושר לתמיכה ב2020 ע"י המשרד הוא (אם ריק אז הנתון יימשך מהשנה הקודמת):</label>
+
+
         <input type="number" id="approved" min="0"></br>
-        <p id="ten_percent">1. המוסד יממן לפחות 10% מעלות הפעילות הנתמכת ב2020 בסך:</p>
-
-        <p>2. המוסד עמד בדרישת המקורות העצמיים בשנה קודמת</p>
+        <input type="submit" onclick="calc()" id="send_data">
+        <input type="button" onclick="resetForm()" value="נקה נתונים">
+        <p id="ten_percent"></p>
         <p id="drishat_mekorot"></p>
-
-        <p>3. סכום התמיכה אינו מוגבל ע"י שיעור התמיכה המירבי כפי שייבדק להלן:</p>
         <p id="tmiha_mugbelet"></p>
     </div>
-    <p id="self_income_last_years">סכום המקורות העצמיים שהציג בשנה קודמת בה נתמך 2018-9 = X</p>
-    <p id="seventy_five_percent_income_last_year">שיעור של 75% מסכום המקורות העצמיים בשנה קודמת = Y = 75%X</p>
-    <p id="max_tmiha_ten_times">עלות הפעילות הנתמכת המקסימלית שתוכר ע"י המשרד תהיה פי 10 = 10Y</p>
-    <p id="max_tmiha_ninty_percent">שיעור התמיכה המירבי שיוכר ע"י המשרד יהיה 90% מעלות הפעילות המוכרת = 9Y</p>
+    <p id="self_income_last_years"></p>
+    <p id="seventy_five_percent_income_last_year"></p>
+    <p id="max_tmiha_ten_times"></p>
+    <p id="max_tmiha_ninty_percent"></p>
     </form>
     <p id="total">סכום התמיכה המירבי יהיה:</p>
     <h3>הבהרה: על מנת לקבל את התמיכה בפועל כמובן שעל מוסד הציבור להגיש דוח ביצוע הוצאות על הסכום המבוקש ולהקפיד שמימן מכספו 10% מעלות הפעילות בפועל.
