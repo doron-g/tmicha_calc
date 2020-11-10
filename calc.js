@@ -23,7 +23,7 @@ function calc() {
     }
 
     const officeSupport = approvedSum / peilutCost
-
+    document.getElementById("office_support").innerText = "שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת היה: " + officeSupport + "%"
     const totalSelfIncome = 0
 
     let alutPeilut
@@ -53,35 +53,41 @@ function calc() {
 
     }
     document.getElementById("drishat_mekorot").innerText = drishatMekorot
-    const selfIncomeSeventyFive = selfIncome * 0.75
-    const maxPeilutCostToApprove = selfIncomeSeventyFive * 10
+    const selfIncomeSeventyFive =  selfIncome * 0.75
+    const maxPeilutCostToApprove =  selfIncomeSeventyFive * 10
     const maxTmihaCash = maxPeilutCostToApprove * 0.9
+
     let tmihaMugbelet
     if (approved == "") {
         tmihaMugbelet = "חסרים נתונים"
     } else {
         if (maxTmihaCash >= approved) {
-            tmihaMugbelet = "עומד בתנאי"
+            tmihaMugbelet = 'אינו מוגבל ע"י שיעור התמיכה המירבי'
         } else {
-            tmihaMugbelet = "מוגבל"
+            tmihaMugbelet = 'מוגבל ע"י שיעור התמיכה המירבי'
         }
     }
     document.getElementById("tmiha_mugbelet").innerText = tmihaMugbelet
-    const costTenPercent = peilutCost * 0.1
+    const costTenPercent =  Math.round(alutPeilut * 0.1).toLocaleString()
 
+
+    document.getElementById("ten_percent").innerText = " 1. המוסד יממן לפחות 10% מעלות הפעילות הנתמכת בסך:" + costTenPercent
     let finalSum
-    if (approvedSum > maxTmihaCash) {
-        finalSum = maxTmihaCash
+    if (drishatMekorot == "לא עומד בתנאי") {
+        finalSum = "לא עומד בתנאי"
     } else {
-        finalSum = approvedSum
-
+        if (approved > maxTmihaCash) {
+            finalSum = Math.round(maxTmihaCash).toLocaleString() + 'ש"ח'
+        } else {
+            finalSum = Math.round(approved).toLocaleString() + 'ש"ח'
+        }
     }
-    document.getElementById("self_income_last_years").innerText = " סכום המקורות העצמיים שהציג בשנה קודמת בה נתמך 2018-9" + selfIncome
-    document.getElementById("seventy_five_percent_income_last_year").innerText = " שיעור של 75% מסכום המקורות העצמיים בשנה קודמת " + selfIncomeSeventyFive
-    document.getElementById("max_tmiha_ten_times").innerText = " עלות הפעילות הנתמכת המקסימלית שתוכר ע\"י המשרד תהיה פי 10  " + maxPeilutCostToApprove
-    document.getElementById("max_tmiha_ninty_percent").innerText = " שיעור התמיכה המירבי שיוכר ע\"י המשרד יהיה 90% מעלות הפעילות המוכרת " + maxTmihaCash
+    document.getElementById("self_income_last_years").innerText = " סכום המקורות העצמיים שהציג בשנה קודמת בה נתמך  2018-9 " + Math.round(selfIncome).toLocaleString()
+    document.getElementById("seventy_five_percent_income_last_year").innerText = " שיעור של 75% מסכום המקורות העצמיים בשנה קודמת " + Math.round(selfIncomeSeventyFive).toLocaleString()
+    document.getElementById("max_tmiha_ten_times").innerText = " עלות הפעילות הנתמכת המקסימלית שתוכר ע\"י המשרד תהיה פי 10  " + Math.round(maxPeilutCostToApprove).toLocaleString()
+    document.getElementById("max_tmiha_ninty_percent").innerText = " שיעור התמיכה המירבי שיוכר ע\"י המשרד יהיה 90% מעלות הפעילות המוכרת " + Math.round(maxTmihaCash).toLocaleString()
 
-    document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה: " + Math.round(finalSum).toLocaleString() + ' ש"ח'
+    document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה: " + finalSum
 
     console.log("maxTmiha " + maxTmiha)
     console.log("selfIncome " + selfIncome)
@@ -96,7 +102,8 @@ function calc() {
 
 
 }
-//
-// function resetForm() {
-//     document.getElementById("data_form").reset();
-// }
+
+
+function resetForm() {
+    document.getElementById("data_form").reset();
+}

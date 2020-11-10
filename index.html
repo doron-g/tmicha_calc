@@ -178,34 +178,36 @@
         </br>
         <label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label>
         <input type="number" id="max_tmiha" name="max_tmiha" min="0" max="100"> </br>
-        <label for="self_income">המקורות העצמיים שהציג מוסד הציבור היו:</label>
+        <label for="self_income">המקורות העצמיים שהציג מוסד הציבור בשנה הקודמת היו:</label>
         <input type="number" id="self_income" name="self_income" min="0"></br>
-        <label for="alut_nitmehet">עלות הפעילות הנתמכת הייתה (ניתן להשאיר ריק):</label>
+        <label for="alut_nitmehet">עלות הפעילות הנתמכת בשנה הקודמת הייתה (ניתן להשאיר ריק):</label>
         <input type="number" id="alut_nitmehet" min="0"></br>
-        <label for="approved_sum">הסכום שאושר לתמיכה ע"י המשרד היה (ניתן להשאיר ריק):</label>
+        <label for="approved_sum">הסכום שאושר לתמיכה ע"י המשרד בשנה הקודמת היה (ניתן להשאיר ריק):</label>
         <input type="number" id="approved_sum" min="0"></br>
+
+
+        <p id="office_support">שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת היה:</p>
         <input type="submit" onclick="calc()" id="send_data">
         <input type="button" onclick="resetForm()" value="נקה נתונים">
-
-        <p>השיעור תמיכת המשרד מתוך עלות הפעילות היה:</p>
-
 
 </div>
 
 <div>
     <p>נתונים לגבי שנת התמיכה הזו (2020) למוסד ציבור שלא מציג מקורות עצמיים</p>
     <p>סך המקורות העצמיים שהציג מוסד הציבור הם 0 ₪</p>
-    <label for="alut_peilut">עלות הפעילות הנתמכת כפי שהוגשה ע"י מוסד הציבור היא(אם ריק אז הנתון יימשך מהשנה
+    <label for="alut_peilut">עלות הפעילות הנתמכת ב2020 כפי שהוגשה ע"י מוסד הציבור היא(אם ריק אז הנתון יימשך מהשנה
         הקודמת):</label>
     <input type="number" id="alut_peilut" min="0"> </br>
     <div>
-        <label for="approved">הסכום שאושר לתמיכה ע"י המשרד הוא (אם ריק אז הנתון יימשך מהשנה הקודמת):</label>
+        <label for="approved">הסכום שאושר לתמיכה ב2020 ע"י המשרד הוא (אם ריק אז הנתון יימשך מהשנה הקודמת):</label>
         <input type="number" id="approved" min="0"></br>
-        <p>1. המוסד יממן לפחות 10% מעלות הפעילות הנתמכת בסך:</p>
-        <p id="drishat_mekorot"></p>
+        <p id="ten_percent">1. המוסד יממן לפחות 10% מעלות הפעילות הנתמכת ב2020 בסך:</p>
+
         <p>2. המוסד עמד בדרישת המקורות העצמיים בשנה קודמת</p>
-        <p id="tmiha_mugbelet"></p>
+        <p id="drishat_mekorot"></p>
+
         <p>3. סכום התמיכה אינו מוגבל ע"י שיעור התמיכה המירבי כפי שייבדק להלן:</p>
+        <p id="tmiha_mugbelet"></p>
     </div>
     <p id="self_income_last_years">סכום המקורות העצמיים שהציג בשנה קודמת בה נתמך 2018-9 = X</p>
     <p id="seventy_five_percent_income_last_year">שיעור של 75% מסכום המקורות העצמיים בשנה קודמת = Y = 75%X</p>
