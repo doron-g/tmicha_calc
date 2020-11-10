@@ -76,6 +76,11 @@ function calc() {
         finalSum = approvedSum
 
     }
+    document.getElementById("self_income_last_years").innerText = " סכום המקורות העצמיים שהציג בשנה קודמת בה נתמך 2018-9" + selfIncome
+    document.getElementById("seventy_five_percent_income_last_year").innerText = " שיעור של 75% מסכום המקורות העצמיים בשנה קודמת " + selfIncomeSeventyFive
+    document.getElementById("max_tmiha_ten_times").innerText = " עלות הפעילות הנתמכת המקסימלית שתוכר ע\"י המשרד תהיה פי 10  " + maxPeilutCostToApprove
+    document.getElementById("max_tmiha_ninty_percent").innerText = " שיעור התמיכה המירבי שיוכר ע\"י המשרד יהיה 90% מעלות הפעילות המוכרת " + maxTmihaCash
+
     document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה: " + Math.round(finalSum).toLocaleString() + ' ש"ח'
 
     console.log("maxTmiha " + maxTmiha)
@@ -91,7 +96,7 @@ function calc() {
 
 
 }
-
-function resetForm() {
-  document.getElementById("data_form").reset();
-}
+//
+// function resetForm() {
+//     document.getElementById("data_form").reset();
+// }
