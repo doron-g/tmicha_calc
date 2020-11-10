@@ -43,23 +43,25 @@ function calc() {
     const selfIncomeSeventyFive = selfIncome * 0.75
     const maxPeilutCostToApprove = selfIncomeSeventyFive * 10
     const maxTmihaCash = maxPeilutCostToApprove * 0.9
-
+    let finalSum
     if (approvedSum > maxTmihaCash) {
-        document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה:" + maxTmihaCash
+        finalSum = maxTmihaCash
     } else {
-        document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה:" + approvedSum
+        finalSum = approvedSum
 
     }
-    console.log("maxTmiha " +  maxTmiha)
-    console.log("selfIncome " +  selfIncome)
-    console.log("peilutCost " +  peilutCost)
-    console.log("approvedSum " +  approvedSum)
-    console.log("officeSupport " +  officeSupport)
-    console.log("alutPeilut " +  alutPeilut)
-    console.log("approved " +  approved)
-    console.log("selfIncomeSeventyFive " +  selfIncomeSeventyFive)
-    console.log("maxPeilutCostToApprove " +  maxPeilutCostToApprove)
-    console.log("maxTmihaCash " +  maxTmihaCash)
+    document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה: " +  Math.round(finalSum).toLocaleString() + ' ש"ח'
+
+    console.log("maxTmiha " + maxTmiha)
+    console.log("selfIncome " + selfIncome)
+    console.log("peilutCost " + peilutCost)
+    console.log("approvedSum " + approvedSum)
+    console.log("officeSupport " + officeSupport)
+    console.log("alutPeilut " + alutPeilut)
+    console.log("approved " + approved)
+    console.log("selfIncomeSeventyFive " + selfIncomeSeventyFive)
+    console.log("maxPeilutCostToApprove " + maxPeilutCostToApprove)
+    console.log("maxTmihaCash " + maxTmihaCash)
 
 
 }

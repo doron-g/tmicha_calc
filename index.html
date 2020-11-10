@@ -11,7 +11,8 @@
 <div>
     <form id="data_form">
         <label for="tmiha_name">שם מבחן התמיכה</label>
-        <select id="my_list">
+        <input list="tmiha_name">
+        <datalist  id="tmiha_name">
             <option value='אוכלוסיות מיוחדות'>אוכלוסיות מיוחדות</option>
             <option value='אופרות תמיכה'>אופרות תמיכה</option>
             <option value='איגודים - תמיכה'>איגודים - תמיכה</option>
@@ -158,7 +159,7 @@
             <option value='תרבות יהודית'>תרבות יהודית</option>
             <option value='תרבות ערבית ודרוזית'>תרבות ערבית ודרוזית</option>
             <option value='תרגום ספרות עברית'>תרגום ספרות עברית</option>
-        </select></br>
+        </datalist ></br>
         <label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label>
         <input type="number" id="max_tmiha" name="max_tmiha" min="1" max="100"> </br>
         <label for="self_income">המקורות העצמיים שהציג מוסד הציבור היו:</label>
