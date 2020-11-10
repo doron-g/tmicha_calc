@@ -38,11 +38,37 @@ function calc() {
     } else {
         approved = approvedSum
     }
+    let drishatMekorot
 
-    // const costTenPercent = peilutCost * 0.1
+    if (maxTmiha == "" || selfIncome == "") {
+        drishatMekorot = "חסרים נתונים"
+
+    } else {
+        if (peilutCost * (100 - maxTmiha) <= selfIncome) {
+            drishatMekorot = "עומד בתנאי"
+        } else {
+            drishatMekorot = "לא עומד בתנאי"
+
+        }
+
+    }
+    document.getElementById("drishat_mekorot").innerText = drishatMekorot
     const selfIncomeSeventyFive = selfIncome * 0.75
     const maxPeilutCostToApprove = selfIncomeSeventyFive * 10
     const maxTmihaCash = maxPeilutCostToApprove * 0.9
+    let tmihaMugbelet
+    if (approved == "") {
+        tmihaMugbelet = "חסרים נתונים"
+    } else {
+        if (maxTmihaCash >= approved) {
+            tmihaMugbelet = "עומד בתנאי"
+        } else {
+            tmihaMugbelet = "מוגבל"
+        }
+    }
+    document.getElementById("tmiha_mugbelet").innerText = tmihaMugbelet
+    const costTenPercent = peilutCost * 0.1
+
     let finalSum
     if (approvedSum > maxTmihaCash) {
         finalSum = maxTmihaCash
@@ -50,7 +76,7 @@ function calc() {
         finalSum = approvedSum
 
     }
-    document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה: " +  Math.round(finalSum).toLocaleString() + ' ש"ח'
+    document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה: " + Math.round(finalSum).toLocaleString() + ' ש"ח'
 
     console.log("maxTmiha " + maxTmiha)
     console.log("selfIncome " + selfIncome)
@@ -64,4 +90,8 @@ function calc() {
     console.log("maxTmihaCash " + maxTmihaCash)
 
 
+}
+
+function resetForm() {
+  document.getElementById("data_form").reset();
 }

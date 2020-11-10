@@ -9,6 +9,8 @@
 <body>
 
 <div>
+    <p>נתונים לגבי השנה הקודמת שבה נתמך מוסד הציבור ממבחן התמיכה (מבין השנים 2018-2019)</p>
+    <p>למילוי ידני ע"י מוסד הציבור:</p>
     <form id="data_form">
         <label for="tmiha_name">שם מבחן התמיכה</label>
         <input list="tmiha_name">
@@ -160,37 +162,39 @@
             <option value='תרבות ערבית ודרוזית'>תרבות ערבית ודרוזית</option>
             <option value='תרגום ספרות עברית'>תרגום ספרות עברית</option>
         </datalist ></br>
-        <label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label>
+        <label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא (ניתן להשאיר ריק):</label>
         <input type="number" id="max_tmiha" name="max_tmiha" min="1" max="100"> </br>
         <label for="self_income">המקורות העצמיים שהציג מוסד הציבור היו:</label>
         <input type="number" id="self_income" name="self_income"></br>
         <label for="alut_nitmehet">עלות הפעילות הנתמכת הייתה:</label>
         <input type="number" id="alut_nitmehet"></br>
-        <label for="approved_sum">הסכום שאושר לתמיכה ע"י המשרד היה:</label>
+        <label for="approved_sum">הסכום שאושר לתמיכה ע"י המשרד היה (ניתן להשאיר ריק):</label>
         <input type="number" id="approved_sum"></br>
 
         <p>השיעור תמיכת המשרד מתוך עלות הפעילות היה:</p>
 
         <input type="submit" onclick="calc()" id="send_data">
-    </form>
+        <input type="button" onclick="resetForm()" value="נקה נתונים">
+
 </div>
 
 <div>
-
+    <p>נתונים לגבי שנת התמיכה הזו (2020) למוסד ציבור שלא מציג מקורות עצמיים</p>
     <p>סך המקורות העצמיים שהציג מוסד הציבור הם 0 ₪</p>
-    <label for="alut_peilut">עלות הפעילות הנתמכת כפי שהוגשה ע"י מוסד הציבור היא:</label>
+    <label for="alut_peilut">עלות הפעילות הנתמכת כפי שהוגשה ע"י מוסד הציבור היא(אם ריק אז הנתון יימשך מהשנה הקודמת):</label>
     <input type="number" id="alut_peilut"> </br>
     <div>
-        <label for="approved">הסכום שאושר לתמיכה ע"י המשרד הוא:</label>
+        <label for="approved">הסכום שאושר לתמיכה ע"י המשרד הוא (אם ריק אז הנתון יימשך מהשנה הקודמת):</label>
         <input id="approved">
-        <p>1. המוסד יממן לפחות 10% מעלות הפעילות הנתמכת בסך:</p>
-        <p>2. המוסד עמד בדרישת המקורות העצמיים בשנה קודמת</p>
+        <p>1. המוסד יממן לפחות 10% מעלות הפעילות הנתמכת בסך:</p><p id="drishat_mekorot"></p>
+        <p >2. המוסד עמד בדרישת המקורות העצמיים בשנה קודמת</p><p id="tmiha_mugbelet"></p>
         <p>3. סכום התמיכה אינו מוגבל ע"י שיעור התמיכה המירבי כפי שייבדק להלן:</p>
     </div>
     <p>סכום המקורות העצמיים שהציג בשנה קודמת בה נתמך 2018-9 = X</p>
     <p>שיעור של 75% מסכום המקורות העצמיים בשנה קודמת = Y = 75%X</p>
     <p>עלות הפעילות הנתמכת המקסימלית שתוכר ע"י המשרד תהיה פי 10 = 10Y</p>
     <p>שיעור התמיכה המירבי שיוכר ע"י המשרד יהיה 90% מעלות הפעילות המוכרת = 9Y</p>
+    </form>
     <p id="total">סכום התמיכה המירבי יהיה:</p>
 
 
