@@ -18,22 +18,59 @@
             -moz-appearance: textfield;
         }
     </style>
-     <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="calc.css">
 </head>
-<body>
-<h1>מחשבון תמיכה בשנת 2020 ללא הצגת מקורות עצמיים</h1>
-<h2>המחשבון בודק לפי התיקון לנוהל - מהו שיעור התמיכה המירבי לשנת 2020 בהתאם למקורות העצמיים שהוצגו בשנה הקודמת והאם
-    המוסד יוכל לקבל את מלוא הסכום שאושר לו גם ללא הצגת מקורות עצמיים בשנה זו.</h2>
-<h2>הנחיות:</h2>
-<h3>יש למלא את הנתונים בתאים הריקים - בתחילה לגבי שנת הפעילות הקודמת ולאחר מכן לגבי שנת 2020.
-    בתאים בהם רשום "ניתן להשאיר ריק" המחשבון ימלא נתון אופטימאלי בצורה אוטומטית. אם הנתון שלכם בפועל הינו שונה יש להקפיד
-    לשנות את הנתון בהתאם.</h3>
-<div>
-    <p>נתונים לגבי השנה הקודמת שבה נתמך מוסד הציבור ממבחן התמיכה (מבין השנים 2018-2019)</p>
+<body class="container">
+<div class="title_container">
+    <div class="big_title">מחשבון תמיכה בשנת 2020 ללא הצגת מקורות עצמיים</div>
+    <div class="middle_title">המחשבון בודק לפי התיקון לנוהל - מהו שיעור התמיכה המירבי לשנת 2020 בהתאם למקורות העצמיים
+        שהוצגו בשנה הקודמת והאם
+        המוסד יוכל לקבל את מלוא הסכום שאושר לו גם ללא הצגת מקורות עצמיים בשנה זו.
+    </div>
+
+    <div class="middle_title"><strong> הנחיות:</strong>
+        יש למלא את הנתונים בתאים הריקים - בתחילה לגבי שנת הפעילות הקודמת ולאחר מכן לגבי שנת 2020.
+        בתאים בהם רשום "ניתן להשאיר ריק" המחשבון ימלא נתון אופטימאלי בצורה אוטומטית. אם הנתון שלכם בפועל הינו שונה יש
+        להקפיד
+        לשנות את הנתון בהתאם.
+    </div>
+</div>
+
+<div class="calc">
+    <p><strong>נתונים לגבי השנה הקודמת שבה נתמך מוסד הציבור ממבחן התמיכה (מבין השנים 2018-2019)</strong></p>
     <p>למילוי ידני ע"י מוסד הציבור:</p>
     <form id="data_form">
-        <label for="tmiha_name">שם מבחן התמיכה</label>
-        <input list="tmiha_name">
+        <table class="table table-borderless">
+
+
+            <tr>
+                <td><label for="tmiha_name">שם מבחן התמיכה</label></td>
+                <td><input list="tmiha_name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label></td>
+                <td><input type="number" id="max_tmiha" name="max_tmiha" min="0" max="100"></td>
+            </tr>
+
+            <tr>
+                <td><label for="self_income">המקורות העצמיים שהציג מוסד הציבור בשנה הקודמת היו:</label></td>
+                <td><input type="number" id="self_income" name="self_income" min="0"></td>
+            </tr>
+
+            <tr>
+                <td><label for="alut_nitmehet">עלות הפעילות הנתמכת בשנה הקודמת הייתה (ניתן להשאיר ריק):</label></td>
+                <td><input type="number" id="alut_nitmehet" min="0"></td>
+            </tr>
+            <tr>
+                <td><label for="approved_sum">הסכום שאושר לתמיכה ע"י המשרד בשנה הקודמת היה (ניתן להשאיר ריק):</label>
+                </td>
+                <td><input type="number" id="approved_sum" min="0"></br></td>
+            </tr>
+
+        </table>
+
+
         <datalist id="tmiha_name">
             <option value='אוכלוסיות מיוחדות'>אוכלוסיות מיוחדות</option>
             <option value='אופרות תמיכה'>אופרות תמיכה</option>
@@ -134,8 +171,7 @@
             <option value='תמיכה בחרשים'>תמיכה בחרשים</option>
             <option value='תמיכה בייעוץ'>תמיכה בייעוץ</option>
             <option value='תמיכה במבני דת לעדות  לא יהודיות לפי 3 א'>תמיכה במבני דת לעדות לא יהודיות לפי 3 א</option>
-            <option value='תמיכה במבני דת לפי 3  א' - כולל הסכם קוא
-            '>תמיכה במבני דת לפי 3 א' - כולל הסכם קוא</option>
+            <option value="' תמיכה במבני דת לפי 3 א' - כולל הסכם קוא"></option>
             <option value='תמיכה במדריכים  מוסיקליים בקונסרבטוריוני'>תמיכה במדריכים מוסיקליים בקונסרבטוריוני</option>
             <option value='תמיכה במוזיאונים'>תמיכה במוזיאונים</option>
             <option value='תמיכה במוסדות לחינוך  מבוגרים'>תמיכה במוסדות לחינוך מבוגרים</option>
@@ -182,46 +218,54 @@
             <option value='תרבות ערבית ודרוזית'>תרבות ערבית ודרוזית</option>
             <option value='תרגום ספרות עברית'>תרגום ספרות עברית</option>
         </datalist>
-        </br>
-        <label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label>
-        <input type="number" id="max_tmiha" name="max_tmiha" min="0" max="100"> </br>
-        <label for="self_income">המקורות העצמיים שהציג מוסד הציבור בשנה הקודמת היו:</label>
-        <input type="number" id="self_income" name="self_income" min="0"></br>
-        <label for="alut_nitmehet">עלות הפעילות הנתמכת בשנה הקודמת הייתה (ניתן להשאיר ריק):</label>
-        <input type="number" id="alut_nitmehet" min="0"></br>
-        <label for="approved_sum">הסכום שאושר לתמיכה ע"י המשרד בשנה הקודמת היה (ניתן להשאיר ריק):</label>
-        <input type="number" id="approved_sum" min="0"></br>
 
 
-        <p id="office_support">שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת היה:</p>
+        <p><strong>נתונים לגבי שנת התמיכה הזו (2020) למוסד ציבור שלא מציג מקורות עצמיים</strong></p>
+        <table class="table table-borderless">
 
 
-        <p>נתונים לגבי שנת התמיכה הזו (2020) למוסד ציבור שלא מציג מקורות עצמיים</p>
+            <tr>
+                <td><label for="alut_peilut">עלות הפעילות הנתמכת ב2020 כפי שהוגשה ע"י מוסד הציבור היא(אם ריק אז הנתון
+                    יימשך מהשנה
+                    הקודמת):</label></td>
+                <td><input type="number" id="alut_peilut" min="0"></td>
+            </tr>
+            <tr>
+                <td><label for="approved">הסכום שאושר לתמיכה ב2020 ע"י המשרד הוא (אם ריק אז הנתון יימשך מהשנה
+                    הקודמת):</label></td>
+                <td><input type="number" id="approved" min="0"></td>
+            </tr>
+        </table>
+
         <p>סך המקורות העצמיים שהציג מוסד הציבור הם 0 ₪</p>
-        <label for="alut_peilut">עלות הפעילות הנתמכת ב2020 כפי שהוגשה ע"י מוסד הציבור היא(אם ריק אז הנתון יימשך מהשנה
-            הקודמת):</label>
-        <input type="number" id="alut_peilut" min="0"> </br>
+
+
         <div>
-            <label for="approved">הסכום שאושר לתמיכה ב2020 ע"י המשרד הוא (אם ריק אז הנתון יימשך מהשנה הקודמת):</label>
 
 
-            <input type="number" id="approved" min="0"></br>
             <input type="submit" onclick="calc()" id="send_data" value="חשב!">
             <input type="button" onclick="resetForm()" value="נקה נתונים">
+        </div>
+        <div class="results">
+            <p id="office_support"></p>
             <p id="ten_percent"></p>
             <p id="drishat_mekorot"></p>
             <p id="tmiha_mugbelet"></p>
+
+            <p id="self_income_last_years"></p>
+            <p id="seventy_five_percent_income_last_year"></p>
+            <p id="max_tmiha_ten_times"></p>
+            <p id="max_tmiha_ninty_percent"></p>
+            <p id="total"></p>
         </div>
-        <p id="self_income_last_years"></p>
-        <p id="seventy_five_percent_income_last_year"></p>
-        <p id="max_tmiha_ten_times"></p>
-        <p id="max_tmiha_ninty_percent"></p>
     </form>
-    <p id="total"></p>
-    <h3>הבהרה: על מנת לקבל את התמיכה בפועל כמובן שעל מוסד הציבור להגיש דוח ביצוע הוצאות על הסכום המבוקש ולהקפיד שמימן
+
+    <div class="center">הבהרה: על מנת לקבל את התמיכה בפועל כמובן שעל מוסד הציבור להגיש דוח ביצוע הוצאות על הסכום המבוקש
+        ולהקפיד שמימן
         מכספו 10% מעלות הפעילות בפועל.
         שימו לב שכחלק מההקלה החדשה בנוהל, המימון העצמי בשיעור 10% לא חייב לעמוד בהגדרה של מקורות עצמיים אלא יכול להגיע
-        גם ממקורות אחרים של מוסד הציבור כגון מענקים ציבוריים וכד'.</h3>
+        גם ממקורות אחרים של מוסד הציבור כגון מענקים ציבוריים וכד'.
+    </div>
 
 
 </div>

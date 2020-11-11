@@ -1,3 +1,53 @@
-#total {
-    color: red;
+.title_container {
+    width: 65vw;
+    text-align: center;
 }
+
+.big_title {
+    font-size: 1.5rem;
+}
+
+.middle_title {
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 12px;
+}
+
+.calc {
+    margin-top: 12px;
+
+}
+
+table {
+    width: 50vw;
+
+}
+
+td {
+    width: 120px;
+}
+
+input {
+    width: 200px;
+
+}
+
+.center {
+    font-size: 1.2rem;
+    text-align: center;
+    text-justify: inter-word;
+    margin-top: 12px;
+
+}
+
+.results {
+    margin-top: 12px;
+    border: solid 1px black;
+    padding: 8px;
+    width: fit-content;
+    opacity: 0;
+    transition: opacity 2s;
+    border-radius: 10px;
+}
+

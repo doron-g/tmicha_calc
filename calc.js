@@ -23,7 +23,7 @@ function calc() {
     }
 
     const officeSupport = approvedSum / peilutCost
-    document.getElementById("office_support").innerText = "שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת היה: " + officeSupport + "%"
+    document.getElementById("office_support").innerText = "שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת היה: " + Math.round(officeSupport).toLocaleString() + "%"
     const totalSelfIncome = 0
 
     let alutPeilut
@@ -52,9 +52,9 @@ function calc() {
         }
 
     }
-    document.getElementById("drishat_mekorot").innerText =  '2. המוסד עמד בדרישת המקורות העצמיים בשנה קודמת' + ":" + drishatMekorot
-    const selfIncomeSeventyFive =  selfIncome * 0.75
-    const maxPeilutCostToApprove =  selfIncomeSeventyFive * 10
+    document.getElementById("drishat_mekorot").innerText = '2. המוסד עמד בדרישת המקורות העצמיים בשנה קודמת' + ":" + drishatMekorot
+    const selfIncomeSeventyFive = selfIncome * 0.75
+    const maxPeilutCostToApprove = selfIncomeSeventyFive * 10
     const maxTmihaCash = maxPeilutCostToApprove * 0.9
 
     let tmihaMugbelet
@@ -68,7 +68,7 @@ function calc() {
         }
     }
     document.getElementById("tmiha_mugbelet").innerText = '3. סכום התמיכה אינו מוגבל ע"י שיעור התמיכה המירבי כפי שייבדק להלן' + ':' + tmihaMugbelet
-    const costTenPercent =  Math.round(alutPeilut * 0.1).toLocaleString()
+    const costTenPercent = Math.round(alutPeilut * 0.1).toLocaleString()
 
 
     document.getElementById("ten_percent").innerText = " 1. המוסד יממן לפחות 10% מעלות הפעילות הנתמכת בסך:" + costTenPercent
@@ -90,6 +90,9 @@ function calc() {
     document.getElementById("total").innerText = "סכום התמיכה המירבי יהיה: " + finalSum
 
 
+    const results = document.getElementsByClassName("results")[0]
+    results.style.opacity = 1
+    results.style.display = "block"
 
     console.log("maxTmiha " + maxTmiha)
     console.log("selfIncome " + selfIncome)
@@ -108,4 +111,8 @@ function calc() {
 
 function resetForm() {
     document.getElementById("data_form").reset();
+    const results = document.getElementsByClassName("results")[0]
+    results.style.opacity = 0
+    results.style.display = "none"
+
 }
