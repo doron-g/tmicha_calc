@@ -2,9 +2,12 @@
 <html dir="rtl" lang="he">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
     <title>מחשבון תמיכה ללא הצגת מקורות עצמיים</title>
-    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
-          integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+    
     <style>
         /* Chrome, Safari, Edge, Opera */
         input::-webkit-outer-spin-button,
@@ -20,52 +23,61 @@
     </style>
     <link rel="stylesheet" href="calc.css">
 </head>
-<body class="container">
+<body>
+    
 <div class="title_container">
-    <div class="big_title">מחשבון תמיכה בשנת 2020 ללא הצגת מקורות עצמיים</div>
-    <div class="middle_title">המחשבון בודק לפי התיקון לנוהל - מהו שיעור התמיכה המירבי לשנת 2020 בהתאם למקורות העצמיים
+    <div class="background">
+    <div class="header">
+        <div class="big_title">מחשבון תמיכה בשנת 2020 ללא הצגת מקורות עצמיים</div>
+        <div class="middle_title">המחשבון בודק לפי התיקון לנוהל - מהו שיעור התמיכה המירבי לשנת 2020 בהתאם למקורות העצמיים
         שהוצגו בשנה הקודמת והאם
         המוסד יוכל לקבל את מלוא הסכום שאושר לו גם ללא הצגת מקורות עצמיים בשנה זו.
+        </div>
+    </div>
     </div>
 
     <div class="middle_title"><strong> הנחיות:</strong>
         יש למלא את הנתונים בתאים הריקים - בתחילה לגבי שנת הפעילות הקודמת ולאחר מכן לגבי שנת 2020.
-        בתאים בהם רשום "ניתן להשאיר ריק" המחשבון ימלא נתון אופטימאלי בצורה אוטומטית. אם הנתון שלכם בפועל הינו שונה יש
-        להקפיד
-        לשנות את הנתון בהתאם.
     </div>
 </div>
 
 <div class="calc">
-    <p><strong>נתונים לגבי השנה הקודמת שבה נתמך מוסד הציבור ממבחן התמיכה (מבין השנים 2018-2019)</strong></p>
-    <p>למילוי ידני ע"י מוסד הציבור:</p>
+    
+    <h2><strong>נתונים לגבי השנה הקודמת שבה נתמך מוסד הציבור ממבחן התמיכה</strong>
+        <br>
+        (מבין השנים 2018-2019)</h2>
+    <h3 style="text-align: right;">למילוי ידני ע"י מוסד הציבור:</h3>
     <form id="data_form">
         <table class="table table-borderless">
 
 
-            <tr>
+            
                 <td><label for="tmiha_name">שם מבחן התמיכה</label></td>
                 <td><input list="tmiha_name"></td>
-            </tr>
+            
 
             <tr>
                 <td><label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label></td>
                 <td><input type="number" id="max_tmiha" name="max_tmiha" min="0" max="100"></td>
+                <td>₪</td>
             </tr>
 
             <tr>
                 <td><label for="self_income">המקורות העצמיים שהציג מוסד הציבור בשנה הקודמת היו:</label></td>
                 <td><input type="number" id="self_income" name="self_income" min="0"></td>
+                <td>₪</td>
             </tr>
 
             <tr>
-                <td><label for="alut_nitmehet">עלות הפעילות הנתמכת בשנה הקודמת הייתה (ניתן להשאיר ריק):</label></td>
+                <td><label for="alut_nitmehet">עלות הפעילות הנתמכת בשנה הקודמת הייתה:</label></td>
                 <td><input type="number" id="alut_nitmehet" min="0"></td>
+                <td>₪</td>
             </tr>
             <tr>
-                <td><label for="approved_sum">הסכום שאושר לתמיכה ע"י המשרד בשנה הקודמת היה (ניתן להשאיר ריק):</label>
+                <td><label for="approved_sum">הסכום שאושר לתמיכה ע"י המשרד בשנה הקודמת היה:</label>
                 </td>
                 <td><input type="number" id="approved_sum" min="0"></br></td>
+                <td>₪</td>
             </tr>
 
         </table>
@@ -220,20 +232,21 @@
         </datalist>
 
 
-        <p><strong>נתונים לגבי שנת התמיכה הזו (2020) למוסד ציבור שלא מציג מקורות עצמיים</strong></p>
+        <h2>נתונים לגבי שנת התמיכה הזו (2020)
+            <br>
+            למוסד ציבור שלא מציג מקורות עצמיים</h2>
         <table class="table table-borderless">
 
 
             <tr>
-                <td><label for="alut_peilut">עלות הפעילות הנתמכת ב2020 כפי שהוגשה ע"י מוסד הציבור היא(אם ריק אז הנתון
-                    יימשך מהשנה
-                    הקודמת):</label></td>
+                <td><label for="alut_peilut">עלות הפעילות הנתמכת ב2020 כפי שהוגשה ע"י מוסד הציבור</label></td>
                 <td><input type="number" id="alut_peilut" min="0"></td>
+                <td>₪</td>
             </tr>
             <tr>
-                <td><label for="approved">הסכום שאושר לתמיכה ב2020 ע"י המשרד הוא (אם ריק אז הנתון יימשך מהשנה
-                    הקודמת):</label></td>
+                <td><label for="approved">הסכום שאושר לתמיכה ב2020 ע"י המשרד הוא:</label></td>
                 <td><input type="number" id="approved" min="0"></td>
+                <td>₪</td>
             </tr>
         </table>
 
@@ -247,27 +260,56 @@
             <input type="button" onclick="resetForm()" value="נקה נתונים">
         </div>
         <div class="results">
-            <p id="office_support"></p>
-            <p id="ten_percent"></p>
-            <p id="drishat_mekorot"></p>
-            <p id="tmiha_mugbelet"></p>
+            
+                <div class="answer">     <div>שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת</div>
+                <div class="dynamicAnswer" id="office_support"></div></div>
+           
+            
+            <div class="answer">  <div>המוסד יממן לפחות 10% מעלות הפעילות הנתמכת בסך</div>
+            <div class="dynamicAnswer nis" id="ten_percent"></div></div>
+              
+             
+            <div class="answer"><div>המוסד עמד בדרישת המקורות העצמיים בשנה קודמת</div>
+            <div class="dynamicAnswer nis" id="drishat_mekorot"></div></div>
+                
+            
+            <div class="answer"><div>סכום התמיכה אינו מוגבל ע"י שיעור התמיכה המירבי כפי שייבדק להלן</div>
+            <div class="dynamicAnswer nis" id="tmiha_mugbelet"></div></div>
+                
+             <div class="answer">        <div> סכום המקורות העצמיים שהציג בשנה הקודמת בה נתמך  2018-2019 </div>
+             <div class="dynamicAnswer nis" id="self_income_last_years"></div></div>
+            
+        
+              <div class="answer">          <div> שיעור של 75% מסכום המקורות העצמיים בשנה קודמת </div>
+              <div class="dynamicAnswer nis" id="seventy_five_percent_income_last_year"></div></div>
+             
+       
+              <div class="answer"> <div> עלות הפעילות הנתמכת המקסימלית שתוכר ע"י המשרד תהיה פי 10</div>
+              <div class="dynamicAnswer nis" id="max_tmiha_ten_times"></div></div>
+              
+               
+             <div class="answer">    <div>  שיעור התמיכה המירבי שיוכר ע"י המשרד יהיה 90% מעלות הפעילות המוכרת </div>
+             <div class="dynamicAnswer nis" id="max_tmiha_ninty_percent"></div></div>
+             
+            
+             <div class="answer">     
+                <div> סכום התמיכה המירבי יהיה:  </div>
+                <div class="dynamicAnswer nis" id="total"></div></div>
+        
+             
 
-            <p id="self_income_last_years"></p>
-            <p id="seventy_five_percent_income_last_year"></p>
-            <p id="max_tmiha_ten_times"></p>
-            <p id="max_tmiha_ninty_percent"></p>
-            <p id="total"></p>
         </div>
     </form>
 
-    <div class="center">הבהרה: על מנת לקבל את התמיכה בפועל כמובן שעל מוסד הציבור להגיש דוח ביצוע הוצאות על הסכום המבוקש
-        ולהקפיד שמימן
-        מכספו 10% מעלות הפעילות בפועל.
-        שימו לב שכחלק מההקלה החדשה בנוהל, המימון העצמי בשיעור 10% לא חייב לעמוד בהגדרה של מקורות עצמיים אלא יכול להגיע
-        גם ממקורות אחרים של מוסד הציבור כגון מענקים ציבוריים וכד'.
-    </div>
 
 
+
+</div>
+<div class="center">הבהרה: על מנת לקבל את התמיכה בפועל כמובן שעל מוסד הציבור להגיש דוח ביצוע הוצאות על הסכום המבוקש
+    ולהקפיד שמימן
+    מכספו 10% מעלות הפעילות בפועל.
+    שימו לב שכחלק מההקלה החדשה בנוהל, המימון העצמי בשיעור 10% לא חייב לעמוד בהגדרה של מקורות עצמיים אלא יכול להגיע
+    גם ממקורות אחרים של מוסד הציבור כגון מענקים ציבוריים וכד'.
 </div>
 
 

@@ -1,52 +1,165 @@
+html {
+  font-size: 20px;
+}
+
 body {
   text-align: center;
+  margin: auto;
+  margin-top: 24px;
+  font-family: "Heebo", sans-serif;
+  font-weight: 800;
+  background: linear-gradient(
+    70deg,
+    rgba(34, 193, 195, 0.18503151260504207) 0%,
+    rgba(253, 187, 45, 0.2074404761904762) 100%
+  );
 }
 
 .title_container {
-  width: 65vw;
+  width: 100vw;
   text-align: center;
+  text-justify: distribute;
+}
+
+.background {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 24px;
+}
+.header {
+  width: 60vw;
+  margin: auto;
 }
 
 .big_title {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .middle_title {
   font-size: 1.2rem;
-  text-align: justify;
+  text-align: center;
   text-justify: inter-word;
   margin-top: 12px;
+  font-weight: bolder;
 }
-
+tr {
+  transition: background-color 0.6s;
+}
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
 .calc {
   margin-top: 12px;
+  width: 65vw;
+  margin: auto;
 }
 
 table {
-  width: 50vw;
+  margin: auto;
+  border-collapse: collapse;
+  width: 65vw;
 }
 
 td {
-  width: 120px;
+  text-align: right;
 }
 
 input {
-  width: 200px;
+  width: 20vw;
+  max-width: 200px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+input[type="button"],
+input[type="submit"] {
+  background: rgba(87, 168, 243, 0.204);
+  border: 2px solid black;
+  padding: 24px;
+  margin: 12px;
+  font-size: 1.2rem;
+  font-family: "Heebo", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  transition: 1s background-color;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background: rgba(87, 168, 243, 0.504);
 }
 
 .center {
   font-size: 1.2rem;
   text-align: center;
   text-justify: inter-word;
+  margin: auto;
   margin-top: 12px;
+  margin-bottom: 12px;
+  width: 80vw;
 }
 
 .results {
   margin-top: 12px;
-  border: solid 1px black;
   padding: 8px;
-  width: fit-content;
-  opacity: 0;
+  width: 70vw;
   transition: opacity 2s;
   border-radius: 10px;
+  display: none;
+}
+
+#total {
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .calc {
+    margin-top: 12px;
+    width: 100vw;
+    margin: auto;
+  }
+  .header {
+    width: 80vw;
+    margin: auto;
+  }
+  html {
+    font-size: 14px;
+  }
+  table {
+    margin: auto;
+    width: 85vw;
+  }
+  input[type="button"],
+  input[type="submit"] {
+    width: 25vw;
+    padding: 8px;
+    max-width: auto;
+  }
+
+  .results {
+    width: 95vw;
+  }
+}
+
+.answer {
+  background-color: rgb(65, 105, 225);
+  margin: 12px;
+  padding: 8px;
+  color: white;
+  font-weight: 900;
+  font-size: 1.1rem;
+  transition: background-color 1s;
+  width: 75%;
+  margin: auto;
+  margin-top: 18px;
+}
+.answer:hover {
+  background-color: rgb(78, 117, 235);
+}
+
+.dynamicAnswer {
+  color: orange;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
