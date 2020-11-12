@@ -110,3 +110,11 @@ function resetForm() {
   results.style.opacity = 0;
   results.style.display = "none";
 }
+//
+// function disclaimer(){
+//   const disclaimer = document.getElementById("disclaimer")
+//   const content = document.getElementById("content")
+//   disclaimer.style.display= none
+//   content.style.display=block
+//
+// }

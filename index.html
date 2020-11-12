@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
     <title>מחשבון תמיכה ללא הצגת מקורות עצמיים</title>
-    
+
     <style>
         /* Chrome, Safari, Edge, Opera */
         input::-webkit-outer-spin-button,
@@ -24,296 +24,330 @@
     <link rel="stylesheet" href="calc.css">
 </head>
 <body>
-    
-<div class="title_container">
-    <div class="background">
-    <div class="header">
-        <div class="big_title">מחשבון תמיכה בשנת 2020 ללא הצגת מקורות עצמיים</div>
-        <div class="middle_title">המחשבון בודק לפי התיקון לנוהל - מהו שיעור התמיכה המירבי לשנת 2020 בהתאם למקורות העצמיים
-        שהוצגו בשנה הקודמת והאם
-        המוסד יוכל לקבל את מלוא הסכום שאושר לו גם ללא הצגת מקורות עצמיים בשנה זו.
+
+<div id="content">
+    <div class="title_container">
+        <div class="background">
+            <div class="header">
+                <div class="big_title">מחשבון תמיכה בשנת 2020 ללא הצגת מקורות עצמיים</div>
+
+                <div id="disclaimer">אתר זה אינו אתר ממשלתי ואין לראות בתוצאות המחשבון כקביעת זכאות לתמיכה או להיקפה,
+                    קביעה זאת תעשה אך
+                    ורק על ידי המשרד התומך ואגף החשב הכללי.
+                    על מוסד הציבור לעמוד בכל הוראות מבחני התמיכה ונהלי התמיכה המחייבים כפי שנקבעים ע"י הגורמים המוסמכים
+                    בהתאם לעניין.
+                    מחשבון זה מבוסס על התיקון שבוצע בנוהל לתמיכות ופורסם ביום 21 לספטמבר וכן על מכתבי ההבהרה שהוציא מטה
+                    התמיכות באגף
+                    החשב הכללי במשרד האוצר.
+<!--                    <button onclick="disclaimer()">אני מאשר</button>-->
+                </div>
+                <div class="middle_title">המחשבון בודק לפי התיקון לנוהל - מהו שיעור התמיכה המירבי לשנת 2020 בהתאם
+                    למקורות העצמיים
+                    שהוצגו בשנה הקודמת והאם
+                    המוסד יוכל לקבל את מלוא הסכום שאושר לו גם ללא הצגת מקורות עצמיים בשנה זו.
+                </div>
+            </div>
+        </div>
+
+        <div class="middle_title"><strong> הנחיות:</strong>
+            יש למלא את הנתונים בתאים הריקים - בתחילה לגבי שנת הפעילות הקודמת ולאחר מכן לגבי שנת 2020.
         </div>
     </div>
-    </div>
 
-    <div class="middle_title"><strong> הנחיות:</strong>
-        יש למלא את הנתונים בתאים הריקים - בתחילה לגבי שנת הפעילות הקודמת ולאחר מכן לגבי שנת 2020.
-    </div>
-</div>
+    <div class="calc">
 
-<div class="calc">
-    
-    <h2><strong>נתונים לגבי השנה הקודמת שבה נתמך מוסד הציבור ממבחן התמיכה</strong>
-        <br>
-        (מבין השנים 2018-2019)</h2>
-    <h3 style="text-align: right;">למילוי ידני ע"י מוסד הציבור:</h3>
-    <form id="data_form">
-        <table class="table table-borderless">
+        <h2><strong>נתונים לגבי השנה הקודמת שבה נתמך מוסד הציבור ממבחן התמיכה</strong>
+            <br>
+            (מבין השנים 2018-2019)</h2>
+        <h3 style="text-align: right;">למילוי ידני ע"י מוסד הציבור:</h3>
+        <form id="data_form">
+            <table class="table table-borderless">
 
 
-            
                 <td><label for="tmiha_name">שם מבחן התמיכה</label></td>
                 <td><input list="tmiha_name"></td>
-            
-
-            <tr>
-                <td><label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label></td>
-                <td><input type="number" id="max_tmiha" name="max_tmiha" min="0" max="100"></td>
-                <td>%</td>
-            </tr>
-
-            <tr>
-                <td><label for="self_income">המקורות העצמיים שהציג מוסד הציבור בשנה הקודמת היו:</label></td>
-                <td><input type="number" id="self_income" name="self_income" min="0"></td>
-                <td>₪</td>
-            </tr>
-
-            <tr>
-                <td><label for="alut_nitmehet">עלות הפעילות הנתמכת בשנה הקודמת הייתה:</label></td>
-                <td><input type="number" id="alut_nitmehet" min="0"></td>
-                <td>₪</td>
-            </tr>
-            <tr>
-                <td><label for="approved_sum">סכום התמיכה ע"י המשרד בשנה הקודמת היה:</label>
-                </td>
-                <td><input type="number" id="approved_sum" min="0"></br></td>
-                <td>₪</td>
-            </tr>
-
-        </table>
 
 
-        <datalist id="tmiha_name">
-            <option value='אוכלוסיות מיוחדות'>אוכלוסיות מיוחדות</option>
-            <option value='אופרות תמיכה'>אופרות תמיכה</option>
-            <option value='איגודים - תמיכה'>איגודים - תמיכה</option>
-            <option value='איגודים ומועדפים'>איגודים ומועדפים</option>
-            <option value='אירגוני גג בתרבות'>אירגוני גג בתרבות</option>
-            <option value='אירוח נבחרות בינ"ל'>אירוח נבחרות בינ"ל</option>
-            <option value='אירועים בינלאומיים -  תמיכה'>אירועים בינלאומיים - תמיכה</option>
-            <option value='אמנות פלסטית'>אמנות פלסטית</option>
-            <option value='ארכיונים'>ארכיונים</option>
-            <option value='אשכול תחרותי'>אשכול תחרותי</option>
-            <option value='ביטחון תזונתי'>ביטחון תזונתי</option>
-            <option value='בתי ספר לאומנות -  תמיכה'>בתי ספר לאומנות - תמיכה</option>
-            <option value='בתי ספר למחול לבני  נוער'>בתי ספר למחול לבני נוער</option>
-            <option value='גופי תיאום וקשר'>גופי תיאום וקשר</option>
-            <option value='גופים כליים - מוסיקה'>גופים כליים - מוסיקה</option>
-            <option value='גרעין חינוכי לאומי'>גרעין חינוכי לאומי</option>
-            <option value='הכוונה וליווי לתלמידות'>הכוונה וליווי לתלמידות</option>
-            <option value='הכוונה וליווי לתלמידות  בחמ"ד'>הכוונה וליווי לתלמידות בחמ"ד</option>
-            <option value='המנהלת לזהות יהודית -  תמיכות'>המנהלת לזהות יהודית - תמיכות</option>
-            <option value='העצמה רוחנית בחינוך  הממלכתי-דתי'>העצמה רוחנית בחינוך הממלכתי-דתי</option>
-            <option value='הפעלת מתנדבים במערכת  החינוך'>הפעלת מתנדבים במערכת החינוך</option>
-            <option value='הפעלת קבוצת מחנכים'>הפעלת קבוצת מחנכים</option>
-            <option value='התאחדויות ספורט בבתי  הספר'>התאחדויות ספורט בבתי הספר</option>
-            <option value='זמר עברי'>זמר עברי</option>
-            <option value='חוגי סיור'>חוגי סיור</option>
-            <option value='חוק  הקולנוע'>חוק הקולנוע</option>
-            <option value='טיפול בחללים בהתאם  להחלטת ממשלה'>טיפול בחללים בהתאם להחלטת ממשלה</option>
-            <option value='טיפול בחללים בהתאם  להחלטת ממשלה 5198 מי'>טיפול בחללים בהתאם להחלטת ממשלה 5198 מי</option>
-            <option value='טיפול בקופי מזור'>טיפול בקופי מזור</option>
-            <option value='כפרי סטודנטים'>כפרי סטודנטים</option>
-            <option value='כתבי עת'>כתבי עת</option>
-            <option value='מבחן תמיכות לכתות'>מבחן תמיכות לכתות</option>
-            <option value='מדרשות ליהדות וללימודי  ארץ ישראל'>מדרשות ליהדות וללימודי ארץ ישראל</option>
-            <option value='מוזיאונים - תמיכה'>מוזיאונים - תמיכה</option>
-            <option value='מוזיאונים ואמנות פלסטית'>מוזיאונים ואמנות פלסטית</option>
-            <option value='מוסדות ספרות'>מוסדות ספרות</option>
-            <option value='מוסדות תרבות מדע ומחקר'>מוסדות תרבות מדע ומחקר</option>
-            <option value='מוסדות תרבות תורנית'>מוסדות תרבות תורנית</option>
-            <option value='מוסיקה'>מוסיקה</option>
-            <option value='מוסיקה ותזמורות -  תמיכה'>מוסיקה ותזמורות - תמיכה</option>
-            <option value='מורשת עדות ישראל'>מורשת עדות ישראל</option>
-            <option value='מחול וארגוני גג'>מחול וארגוני גג</option>
-            <option value='מחול תמיכה'>מחול תמיכה</option>
-            <option value='מחקר מורשת ואיגודים'>מחקר מורשת ואיגודים</option>
-            <option value='מינהל אכיפה - תמיכה  במוסדות ציבור'>מינהל אכיפה - תמיכה במוסדות ציבור</option>
-            <option value='מכינות אופק לנוער  בסיכון'>מכינות אופק לנוער בסיכון</option>
-            <option value='מלגות וגופי רוחב'>מלגות וגופי רוחב</option>
-            <option value='מלגות לספורטאים'>מלגות לספורטאים</option>
-            <option value='מנהלת גרעיני משימה  עירוניים - תמיכות'>מנהלת גרעיני משימה עירוניים - תמיכות</option>
-            <option value='מענק ירושלים לתרבות'>מענק ירושלים לתרבות</option>
-            <option value='מענקים לשיפוצים -  תמיכות 3א'>מענקים לשיפוצים - תמיכות 3א</option>
-            <option value='מענקים לשיפוצים  באכסניות הנוער'>מענקים לשיפוצים באכסניות הנוער</option>
-            <option value='מענקים לשיפוצים במוסדות  להגנת הטבע'>מענקים לשיפוצים במוסדות להגנת הטבע</option>
-            <option value='מפגשים בין תלמידים  וצעירים מאוכלוסיות ש'>מפגשים בין תלמידים וצעירים מאוכלוסיות ש</option>
-            <option value='מרכזי אימון ותחרות  אולימפיים'>מרכזי אימון ותחרות אולימפיים</option>
-            <option value='מרכזים להעמקת החינוך  היהודי - תמיכה'>מרכזים להעמקת החינוך היהודי - תמיכה</option>
-            <option value='מתנדבים לשנת שירות'>מתנדבים לשנת שירות</option>
-            <option value='נוער שוחר מדע'>נוער שוחר מדע</option>
-            <option value='סדרנות ליגות מקצועיות'>סדרנות ליגות מקצועיות</option>
-            <option value='סיוע לפנימיות'>סיוע לפנימיות</option>
-            <option value='ספורט מוטורי - תמיכה'>ספורט מוטורי - תמיכה</option>
-            <option value='ספורט נשים - אתנה'>ספורט נשים - אתנה</option>
-            <option value='ספרות'>ספרות</option>
-            <option value='ספרות הרשאה'>ספרות הרשאה</option>
-            <option value='ספרות, כתבי עת ומפעלי  תרבות'>ספרות, כתבי עת ומפעלי תרבות</option>
-            <option value='ספריות תמיכות'>ספריות תמיכות</option>
-            <option value='עידוד הספורט והספורטאי  הישראלי'>עידוד הספורט והספורטאי הישראלי</option>
-            <option value='עידוד קליטת עובדים  ישראלים'>עידוד קליטת עובדים ישראלים</option>
-            <option value='עידוד שירות  משמעותי-תמיכות'>עידוד שירות משמעותי-תמיכות</option>
-            <option value='ענפים מועדפים'>ענפים מועדפים</option>
-            <option value='פסטיבלים לתרבות  ואומנות - תמיכה'>פסטיבלים לתרבות ואומנות - תמיכה</option>
-            <option value='פעולות עם נוער בסיכון'>פעולות עם נוער בסיכון</option>
-            <option value='פעולות תרבות לדרוזים'>פעולות תרבות לדרוזים</option>
-            <option value='פעולות תרבות ערבית'>פעולות תרבות ערבית</option>
-            <option value='פעילות התנדבותית למען  הקהילה של תלמידי'>פעילות התנדבותית למען הקהילה של תלמידי</option>
-            <option value='קבוצות תאטרון'>קבוצות תאטרון</option>
-            <option value='קמחא דפסחא'>קמחא דפסחא</option>
-            <option value='שדרוג חווית צפייה'>שדרוג חווית צפייה</option>
-            <option value='שיטור וסדרנות'>שיטור וסדרנות</option>
-            <option value='שיטור וסדרנות ליגות  נמוכות'>שיטור וסדרנות ליגות נמוכות</option>
-            <option value='שימור אתרי התיישבות'>שימור אתרי התיישבות</option>
-            <option value='שימור רצף פעולות'>שימור רצף פעולות</option>
-            <option value='שיפוצים'>שיפוצים</option>
-            <option value='שיפוצים והצטיידות חסות  הנוער'>שיפוצים והצטיידות חסות הנוער</option>
-            <option value='תאטראות תמיכה'>תאטראות תמיכה</option>
-            <option value='תיאטרון'>תיאטרון</option>
-            <option value='תמיכה באירגונים רפואיים  אחרים'>תמיכה באירגונים רפואיים אחרים</option>
-            <option value='תמיכה באכסניות  חינוכיות לילדים ונוער'>תמיכה באכסניות חינוכיות לילדים ונוער</option>
-            <option value='תמיכה באכסניות חינוכיות  לילדים ונוער'>תמיכה באכסניות חינוכיות לילדים ונוער</option>
-            <option value='תמיכה בארגוני הנכים'>תמיכה בארגוני הנכים</option>
-            <option value='תמיכה בארגוני נוער'>תמיכה בארגוני נוער</option>
-            <option value='תמיכה בארגונים- מרכזי  יום לניצולי שואה'>תמיכה בארגונים- מרכזי יום לניצולי שואה</option>
-            <option value='תמיכה בארגונים (נפגעי  איבה)'>תמיכה בארגונים (נפגעי איבה)</option>
-            <option value='תמיכה בביטחון תזונתי  וקימחא דפסחא'>תמיכה בביטחון תזונתי וקימחא דפסחא</option>
-            <option value='תמיכה בהנצחת רבנים'>תמיכה בהנצחת רבנים</option>
-            <option value='תמיכה בהתנדבות שיקומית'>תמיכה בהתנדבות שיקומית</option>
-            <option value='תמיכה בחרשים'>תמיכה בחרשים</option>
-            <option value='תמיכה בייעוץ'>תמיכה בייעוץ</option>
-            <option value='תמיכה במבני דת לעדות  לא יהודיות לפי 3 א'>תמיכה במבני דת לעדות לא יהודיות לפי 3 א</option>
-            <option value="' תמיכה במבני דת לפי 3 א' - כולל הסכם קוא"></option>
-            <option value='תמיכה במדריכים  מוסיקליים בקונסרבטוריוני'>תמיכה במדריכים מוסיקליים בקונסרבטוריוני</option>
-            <option value='תמיכה במוזיאונים'>תמיכה במוזיאונים</option>
-            <option value='תמיכה במוסדות לחינוך  מבוגרים'>תמיכה במוסדות לחינוך מבוגרים</option>
-            <option value='תמיכה במוסדות ציבור'>תמיכה במוסדות ציבור</option>
-            <option value='תמיכה במוסדות ציבור  בתחומי הדרכה, סיורי'>תמיכה במוסדות ציבור בתחומי הדרכה, סיורי</option>
-            <option value='תמיכה במוסדות תורניים'>תמיכה במוסדות תורניים</option>
-            <option value='תמיכה במצפה כוכבים  ומיזמים'>תמיכה במצפה כוכבים ומיזמים</option>
-            <option value='תמיכה במצפים ומיזמים  טכנולוגיים'>תמיכה במצפים ומיזמים טכנולוגיים</option>
-            <option value='תמיכה במרכז למחקר  ולהוראת הטבע והנוף על'>תמיכה במרכז למחקר ולהוראת הטבע והנוף על</option>
-            <option value='תמיכה במרכזי המחקר  והפיתוח האזוריים'>תמיכה במרכזי המחקר והפיתוח האזוריים</option>
-            <option value='תמיכה במרכזי מחקר'>תמיכה במרכזי מחקר</option>
-            <option value='תמיכה בעמותות'>תמיכה בעמותות</option>
-            <option value='תמיכה בעמותות העוסקות  בקליטה חברתית'>תמיכה בעמותות העוסקות בקליטה חברתית</option>
-            <option value='תמיכה בעמותות משלבות'>תמיכה בעמותות משלבות</option>
-            <option value='תמיכה ברבנים רפורמים'>תמיכה ברבנים רפורמים</option>
-            <option value='תמיכה ברכישת רכב להסעת  נכים'>תמיכה ברכישת רכב להסעת נכים</option>
-            <option value='תמיכה בשידורים  קהילתיים'>תמיכה בשידורים קהילתיים</option>
-            <option value='תמיכה בשיעורי תורה  ותרבות יהודית שלא במ'>תמיכה בשיעורי תורה ותרבות יהודית שלא במ</option>
-            <option value='תמיכה בשיפוצים  והצטיידות חסות הנוער'>תמיכה בשיפוצים והצטיידות חסות הנוער</option>
-            <option value='תמיכה בשירותי טיפול  לנשים ונערות במצוקה'>תמיכה בשירותי טיפול לנשים ונערות במצוקה</option>
-            <option value='תמיכה בתנועות נוער'>תמיכה בתנועות נוער</option>
-            <option value='תמיכות'>תמיכות</option>
-            <option value='תמיכות-גיור'>תמיכות-גיור</option>
-            <option value='תמיכות בארגוני הנצחה'>תמיכות בארגוני הנצחה</option>
-            <option value='תמיכות בארגונים  העוסקים בעידוד העלייה'>תמיכות בארגונים העוסקים בעידוד העלייה</option>
-            <option value='תמיכות בבתי הדין  לממונות'>תמיכות בבתי הדין לממונות</option>
-            <option value='תמיכות בגופי רוחב  (קמא)'>תמיכות בגופי רוחב (קמא)</option>
-            <option value='תמיכות בכפרי נוער'>תמיכות בכפרי נוער</option>
-            <option value='תמיכות בעמותות'>תמיכות בעמותות</option>
-            <option value='תמיכות בעמותות צער  בעלי חיים'>תמיכות בעמותות צער בעלי חיים</option>
-            <option value='תמיכות בפיקוח על  חסויים חסרי אמצעים'>תמיכות בפיקוח על חסויים חסרי אמצעים</option>
-            <option value='תמיכות בפעילויות שונות  בהתאם למדיניות ה'>תמיכות בפעילויות שונות בהתאם למדיניות ה</option>
-            <option value='תמיכות בפעילות מתנדבים  בחקלאות'>תמיכות בפעילות מתנדבים בחקלאות</option>
-            <option value='תמיכות בשידורים בשפה  האמהרית'>תמיכות בשידורים בשפה האמהרית</option>
-            <option value='תמיכות בשירותי קהילה  אישיים וחברתיים'>תמיכות בשירותי קהילה אישיים וחברתיים</option>
-            <option value='תמיכות בשירותים לבעלי  מוגבלויות'>תמיכות בשירותים לבעלי מוגבלויות</option>
-            <option value='תמיכות לפי 3א'>תמיכות לפי 3א</option>
-            <option value='תמיכות לשיתוף פעולה  אזורי'>תמיכות לשיתוף פעולה אזורי</option>
-            <option value='תקנת מחול - יוצרים  עצמאיים, הרכבים מרכז'>תקנת מחול - יוצרים עצמאיים, הרכבים מרכז</option>
-            <option value='תרבות בנגב'>תרבות בנגב</option>
-            <option value='תרבות בקהילה תמיכה'>תרבות בקהילה תמיכה</option>
-            <option value='תרבות חרדית'>תרבות חרדית</option>
-            <option value='תרבות יהודית'>תרבות יהודית</option>
-            <option value='תרבות ערבית ודרוזית'>תרבות ערבית ודרוזית</option>
-            <option value='תרגום ספרות עברית'>תרגום ספרות עברית</option>
-        </datalist>
+                <tr>
+                    <td><label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label></td>
+                    <td><input type="number" id="max_tmiha" name="max_tmiha" min="0" max="100"></td>
+                    <td>%</td>
+                </tr>
+
+                <tr>
+                    <td><label for="self_income">המקורות העצמיים שהציג מוסד הציבור בשנה הקודמת היו:</label></td>
+                    <td><input type="number" id="self_income" name="self_income" min="0"></td>
+                    <td>₪</td>
+                </tr>
+
+                <tr>
+                    <td><label for="alut_nitmehet">עלות הפעילות הנתמכת בשנה הקודמת הייתה:</label></td>
+                    <td><input type="number" id="alut_nitmehet" min="0"></td>
+                    <td>₪</td>
+                </tr>
+                <tr>
+                    <td><label for="approved_sum">סכום התמיכה ע"י המשרד בשנה הקודמת היה:</label>
+                    </td>
+                    <td><input type="number" id="approved_sum" min="0"></br></td>
+                    <td>₪</td>
+                </tr>
+
+            </table>
 
 
-        <h2>נתונים לגבי שנת התמיכה הזו (2020)
-            <br>
-            למוסד ציבור שלא מציג מקורות עצמיים</h2>
-        <table class="table table-borderless">
+            <datalist id="tmiha_name">
+                <option value='אוכלוסיות מיוחדות'>אוכלוסיות מיוחדות</option>
+                <option value='אופרות תמיכה'>אופרות תמיכה</option>
+                <option value='איגודים - תמיכה'>איגודים - תמיכה</option>
+                <option value='איגודים ומועדפים'>איגודים ומועדפים</option>
+                <option value='אירגוני גג בתרבות'>אירגוני גג בתרבות</option>
+                <option value='אירוח נבחרות בינ"ל'>אירוח נבחרות בינ"ל</option>
+                <option value='אירועים בינלאומיים -  תמיכה'>אירועים בינלאומיים - תמיכה</option>
+                <option value='אמנות פלסטית'>אמנות פלסטית</option>
+                <option value='ארכיונים'>ארכיונים</option>
+                <option value='אשכול תחרותי'>אשכול תחרותי</option>
+                <option value='ביטחון תזונתי'>ביטחון תזונתי</option>
+                <option value='בתי ספר לאומנות -  תמיכה'>בתי ספר לאומנות - תמיכה</option>
+                <option value='בתי ספר למחול לבני  נוער'>בתי ספר למחול לבני נוער</option>
+                <option value='גופי תיאום וקשר'>גופי תיאום וקשר</option>
+                <option value='גופים כליים - מוסיקה'>גופים כליים - מוסיקה</option>
+                <option value='גרעין חינוכי לאומי'>גרעין חינוכי לאומי</option>
+                <option value='הכוונה וליווי לתלמידות'>הכוונה וליווי לתלמידות</option>
+                <option value='הכוונה וליווי לתלמידות  בחמ"ד'>הכוונה וליווי לתלמידות בחמ"ד</option>
+                <option value='המנהלת לזהות יהודית -  תמיכות'>המנהלת לזהות יהודית - תמיכות</option>
+                <option value='העצמה רוחנית בחינוך  הממלכתי-דתי'>העצמה רוחנית בחינוך הממלכתי-דתי</option>
+                <option value='הפעלת מתנדבים במערכת  החינוך'>הפעלת מתנדבים במערכת החינוך</option>
+                <option value='הפעלת קבוצת מחנכים'>הפעלת קבוצת מחנכים</option>
+                <option value='התאחדויות ספורט בבתי  הספר'>התאחדויות ספורט בבתי הספר</option>
+                <option value='זמר עברי'>זמר עברי</option>
+                <option value='חוגי סיור'>חוגי סיור</option>
+                <option value='חוק  הקולנוע'>חוק הקולנוע</option>
+                <option value='טיפול בחללים בהתאם  להחלטת ממשלה'>טיפול בחללים בהתאם להחלטת ממשלה</option>
+                <option value='טיפול בחללים בהתאם  להחלטת ממשלה 5198 מי'>טיפול בחללים בהתאם להחלטת ממשלה 5198 מי
+                </option>
+                <option value='טיפול בקופי מזור'>טיפול בקופי מזור</option>
+                <option value='כפרי סטודנטים'>כפרי סטודנטים</option>
+                <option value='כתבי עת'>כתבי עת</option>
+                <option value='מבחן תמיכות לכתות'>מבחן תמיכות לכתות</option>
+                <option value='מדרשות ליהדות וללימודי  ארץ ישראל'>מדרשות ליהדות וללימודי ארץ ישראל</option>
+                <option value='מוזיאונים - תמיכה'>מוזיאונים - תמיכה</option>
+                <option value='מוזיאונים ואמנות פלסטית'>מוזיאונים ואמנות פלסטית</option>
+                <option value='מוסדות ספרות'>מוסדות ספרות</option>
+                <option value='מוסדות תרבות מדע ומחקר'>מוסדות תרבות מדע ומחקר</option>
+                <option value='מוסדות תרבות תורנית'>מוסדות תרבות תורנית</option>
+                <option value='מוסיקה'>מוסיקה</option>
+                <option value='מוסיקה ותזמורות -  תמיכה'>מוסיקה ותזמורות - תמיכה</option>
+                <option value='מורשת עדות ישראל'>מורשת עדות ישראל</option>
+                <option value='מחול וארגוני גג'>מחול וארגוני גג</option>
+                <option value='מחול תמיכה'>מחול תמיכה</option>
+                <option value='מחקר מורשת ואיגודים'>מחקר מורשת ואיגודים</option>
+                <option value='מינהל אכיפה - תמיכה  במוסדות ציבור'>מינהל אכיפה - תמיכה במוסדות ציבור</option>
+                <option value='מכינות אופק לנוער  בסיכון'>מכינות אופק לנוער בסיכון</option>
+                <option value='מלגות וגופי רוחב'>מלגות וגופי רוחב</option>
+                <option value='מלגות לספורטאים'>מלגות לספורטאים</option>
+                <option value='מנהלת גרעיני משימה  עירוניים - תמיכות'>מנהלת גרעיני משימה עירוניים - תמיכות</option>
+                <option value='מענק ירושלים לתרבות'>מענק ירושלים לתרבות</option>
+                <option value='מענקים לשיפוצים -  תמיכות 3א'>מענקים לשיפוצים - תמיכות 3א</option>
+                <option value='מענקים לשיפוצים  באכסניות הנוער'>מענקים לשיפוצים באכסניות הנוער</option>
+                <option value='מענקים לשיפוצים במוסדות  להגנת הטבע'>מענקים לשיפוצים במוסדות להגנת הטבע</option>
+                <option value='מפגשים בין תלמידים  וצעירים מאוכלוסיות ש'>מפגשים בין תלמידים וצעירים מאוכלוסיות ש
+                </option>
+                <option value='מרכזי אימון ותחרות  אולימפיים'>מרכזי אימון ותחרות אולימפיים</option>
+                <option value='מרכזים להעמקת החינוך  היהודי - תמיכה'>מרכזים להעמקת החינוך היהודי - תמיכה</option>
+                <option value='מתנדבים לשנת שירות'>מתנדבים לשנת שירות</option>
+                <option value='נוער שוחר מדע'>נוער שוחר מדע</option>
+                <option value='סדרנות ליגות מקצועיות'>סדרנות ליגות מקצועיות</option>
+                <option value='סיוע לפנימיות'>סיוע לפנימיות</option>
+                <option value='ספורט מוטורי - תמיכה'>ספורט מוטורי - תמיכה</option>
+                <option value='ספורט נשים - אתנה'>ספורט נשים - אתנה</option>
+                <option value='ספרות'>ספרות</option>
+                <option value='ספרות הרשאה'>ספרות הרשאה</option>
+                <option value='ספרות, כתבי עת ומפעלי  תרבות'>ספרות, כתבי עת ומפעלי תרבות</option>
+                <option value='ספריות תמיכות'>ספריות תמיכות</option>
+                <option value='עידוד הספורט והספורטאי  הישראלי'>עידוד הספורט והספורטאי הישראלי</option>
+                <option value='עידוד קליטת עובדים  ישראלים'>עידוד קליטת עובדים ישראלים</option>
+                <option value='עידוד שירות  משמעותי-תמיכות'>עידוד שירות משמעותי-תמיכות</option>
+                <option value='ענפים מועדפים'>ענפים מועדפים</option>
+                <option value='פסטיבלים לתרבות  ואומנות - תמיכה'>פסטיבלים לתרבות ואומנות - תמיכה</option>
+                <option value='פעולות עם נוער בסיכון'>פעולות עם נוער בסיכון</option>
+                <option value='פעולות תרבות לדרוזים'>פעולות תרבות לדרוזים</option>
+                <option value='פעולות תרבות ערבית'>פעולות תרבות ערבית</option>
+                <option value='פעילות התנדבותית למען  הקהילה של תלמידי'>פעילות התנדבותית למען הקהילה של תלמידי</option>
+                <option value='קבוצות תאטרון'>קבוצות תאטרון</option>
+                <option value='קמחא דפסחא'>קמחא דפסחא</option>
+                <option value='שדרוג חווית צפייה'>שדרוג חווית צפייה</option>
+                <option value='שיטור וסדרנות'>שיטור וסדרנות</option>
+                <option value='שיטור וסדרנות ליגות  נמוכות'>שיטור וסדרנות ליגות נמוכות</option>
+                <option value='שימור אתרי התיישבות'>שימור אתרי התיישבות</option>
+                <option value='שימור רצף פעולות'>שימור רצף פעולות</option>
+                <option value='שיפוצים'>שיפוצים</option>
+                <option value='שיפוצים והצטיידות חסות  הנוער'>שיפוצים והצטיידות חסות הנוער</option>
+                <option value='תאטראות תמיכה'>תאטראות תמיכה</option>
+                <option value='תיאטרון'>תיאטרון</option>
+                <option value='תמיכה באירגונים רפואיים  אחרים'>תמיכה באירגונים רפואיים אחרים</option>
+                <option value='תמיכה באכסניות  חינוכיות לילדים ונוער'>תמיכה באכסניות חינוכיות לילדים ונוער</option>
+                <option value='תמיכה באכסניות חינוכיות  לילדים ונוער'>תמיכה באכסניות חינוכיות לילדים ונוער</option>
+                <option value='תמיכה בארגוני הנכים'>תמיכה בארגוני הנכים</option>
+                <option value='תמיכה בארגוני נוער'>תמיכה בארגוני נוער</option>
+                <option value='תמיכה בארגונים- מרכזי  יום לניצולי שואה'>תמיכה בארגונים- מרכזי יום לניצולי שואה</option>
+                <option value='תמיכה בארגונים (נפגעי  איבה)'>תמיכה בארגונים (נפגעי איבה)</option>
+                <option value='תמיכה בביטחון תזונתי  וקימחא דפסחא'>תמיכה בביטחון תזונתי וקימחא דפסחא</option>
+                <option value='תמיכה בהנצחת רבנים'>תמיכה בהנצחת רבנים</option>
+                <option value='תמיכה בהתנדבות שיקומית'>תמיכה בהתנדבות שיקומית</option>
+                <option value='תמיכה בחרשים'>תמיכה בחרשים</option>
+                <option value='תמיכה בייעוץ'>תמיכה בייעוץ</option>
+                <option value='תמיכה במבני דת לעדות  לא יהודיות לפי 3 א'>תמיכה במבני דת לעדות לא יהודיות לפי 3 א
+                </option>
+                <option value="' תמיכה במבני דת לפי 3 א' - כולל הסכם קוא"></option>
+                <option value='תמיכה במדריכים  מוסיקליים בקונסרבטוריוני'>תמיכה במדריכים מוסיקליים בקונסרבטוריוני
+                </option>
+                <option value='תמיכה במוזיאונים'>תמיכה במוזיאונים</option>
+                <option value='תמיכה במוסדות לחינוך  מבוגרים'>תמיכה במוסדות לחינוך מבוגרים</option>
+                <option value='תמיכה במוסדות ציבור'>תמיכה במוסדות ציבור</option>
+                <option value='תמיכה במוסדות ציבור  בתחומי הדרכה, סיורי'>תמיכה במוסדות ציבור בתחומי הדרכה, סיורי
+                </option>
+                <option value='תמיכה במוסדות תורניים'>תמיכה במוסדות תורניים</option>
+                <option value='תמיכה במצפה כוכבים  ומיזמים'>תמיכה במצפה כוכבים ומיזמים</option>
+                <option value='תמיכה במצפים ומיזמים  טכנולוגיים'>תמיכה במצפים ומיזמים טכנולוגיים</option>
+                <option value='תמיכה במרכז למחקר  ולהוראת הטבע והנוף על'>תמיכה במרכז למחקר ולהוראת הטבע והנוף על
+                </option>
+                <option value='תמיכה במרכזי המחקר  והפיתוח האזוריים'>תמיכה במרכזי המחקר והפיתוח האזוריים</option>
+                <option value='תמיכה במרכזי מחקר'>תמיכה במרכזי מחקר</option>
+                <option value='תמיכה בעמותות'>תמיכה בעמותות</option>
+                <option value='תמיכה בעמותות העוסקות  בקליטה חברתית'>תמיכה בעמותות העוסקות בקליטה חברתית</option>
+                <option value='תמיכה בעמותות משלבות'>תמיכה בעמותות משלבות</option>
+                <option value='תמיכה ברבנים רפורמים'>תמיכה ברבנים רפורמים</option>
+                <option value='תמיכה ברכישת רכב להסעת  נכים'>תמיכה ברכישת רכב להסעת נכים</option>
+                <option value='תמיכה בשידורים  קהילתיים'>תמיכה בשידורים קהילתיים</option>
+                <option value='תמיכה בשיעורי תורה  ותרבות יהודית שלא במ'>תמיכה בשיעורי תורה ותרבות יהודית שלא במ
+                </option>
+                <option value='תמיכה בשיפוצים  והצטיידות חסות הנוער'>תמיכה בשיפוצים והצטיידות חסות הנוער</option>
+                <option value='תמיכה בשירותי טיפול  לנשים ונערות במצוקה'>תמיכה בשירותי טיפול לנשים ונערות במצוקה
+                </option>
+                <option value='תמיכה בתנועות נוער'>תמיכה בתנועות נוער</option>
+                <option value='תמיכות'>תמיכות</option>
+                <option value='תמיכות-גיור'>תמיכות-גיור</option>
+                <option value='תמיכות בארגוני הנצחה'>תמיכות בארגוני הנצחה</option>
+                <option value='תמיכות בארגונים  העוסקים בעידוד העלייה'>תמיכות בארגונים העוסקים בעידוד העלייה</option>
+                <option value='תמיכות בבתי הדין  לממונות'>תמיכות בבתי הדין לממונות</option>
+                <option value='תמיכות בגופי רוחב  (קמא)'>תמיכות בגופי רוחב (קמא)</option>
+                <option value='תמיכות בכפרי נוער'>תמיכות בכפרי נוער</option>
+                <option value='תמיכות בעמותות'>תמיכות בעמותות</option>
+                <option value='תמיכות בעמותות צער  בעלי חיים'>תמיכות בעמותות צער בעלי חיים</option>
+                <option value='תמיכות בפיקוח על  חסויים חסרי אמצעים'>תמיכות בפיקוח על חסויים חסרי אמצעים</option>
+                <option value='תמיכות בפעילויות שונות  בהתאם למדיניות ה'>תמיכות בפעילויות שונות בהתאם למדיניות ה
+                </option>
+                <option value='תמיכות בפעילות מתנדבים  בחקלאות'>תמיכות בפעילות מתנדבים בחקלאות</option>
+                <option value='תמיכות בשידורים בשפה  האמהרית'>תמיכות בשידורים בשפה האמהרית</option>
+                <option value='תמיכות בשירותי קהילה  אישיים וחברתיים'>תמיכות בשירותי קהילה אישיים וחברתיים</option>
+                <option value='תמיכות בשירותים לבעלי  מוגבלויות'>תמיכות בשירותים לבעלי מוגבלויות</option>
+                <option value='תמיכות לפי 3א'>תמיכות לפי 3א</option>
+                <option value='תמיכות לשיתוף פעולה  אזורי'>תמיכות לשיתוף פעולה אזורי</option>
+                <option value='תקנת מחול - יוצרים  עצמאיים, הרכבים מרכז'>תקנת מחול - יוצרים עצמאיים, הרכבים מרכז
+                </option>
+                <option value='תרבות בנגב'>תרבות בנגב</option>
+                <option value='תרבות בקהילה תמיכה'>תרבות בקהילה תמיכה</option>
+                <option value='תרבות חרדית'>תרבות חרדית</option>
+                <option value='תרבות יהודית'>תרבות יהודית</option>
+                <option value='תרבות ערבית ודרוזית'>תרבות ערבית ודרוזית</option>
+                <option value='תרגום ספרות עברית'>תרגום ספרות עברית</option>
+            </datalist>
 
 
-            <tr>
-                <td><label for="alut_peilut">עלות הפעילות הנתמכת ב2020 כפי שהוגשה ע"י מוסד הציבור</label></td>
-                <td><input type="number" id="alut_peilut" min="0"></td>
-                <td>₪</td>
-            </tr>
-            <tr>
-                <td><label for="approved">סכום התמיכה על ידי המשרד ב2020:</label></td>
-                <td><input type="number" id="approved" min="0"></td>
-                <td>₪</td>
-            </tr>
-        </table>
-
-        <p>סך המקורות העצמיים שהציג מוסד הציבור הם 0 ₪</p>
+            <h2>נתונים לגבי שנת התמיכה הזו (2020)
+                <br>
+                למוסד ציבור שלא מציג מקורות עצמיים</h2>
+            <table class="table table-borderless">
 
 
-        <div>
+                <tr>
+                    <td><label for="alut_peilut">עלות הפעילות הנתמכת ב2020 כפי שהוגשה ע"י מוסד הציבור</label></td>
+                    <td><input type="number" id="alut_peilut" min="0"></td>
+                    <td>₪</td>
+                </tr>
+                <tr>
+                    <td><label for="approved">סכום התמיכה על ידי המשרד ב2020:</label></td>
+                    <td><input type="number" id="approved" min="0"></td>
+                    <td>₪</td>
+                </tr>
+            </table>
+
+            <p>סך המקורות העצמיים שהציג מוסד הציבור הם 0 ₪</p>
 
 
-            <input type="submit" onclick="calc()" id="send_data" value="חשב!">
-            <input type="button" onclick="resetForm()" value="נקה נתונים">
-        </div>
-        <div class="results">
-             <div class="answer">
-                <div> סכום התמיכה המירבי יהיה:  </div>
-                <div class="dynamicAnswer nis" id="total"></div></div>
+            <div>
+
+
+                <input type="submit" onclick="calc()" id="send_data" value="חשב!">
+                <input type="button" onclick="resetForm()" value="נקה נתונים">
+            </div>
+            <div class="results">
+                <div class="answer">
+                    <div> סכום התמיכה המירבי יהיה:</div>
+                    <div class="dynamicAnswer nis" id="total"></div>
+                </div>
 
                 <div>הסבר לתהליך החישוב:</div>
-                <div class="answer">     <div>שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת</div>
-                <div class="dynamicAnswer" id="office_support"></div></div>
-           
-            
-            <div class="answer">  <div>המוסד יממן לפחות 10% מעלות הפעילות הנתמכת בסך</div>
-            <div class="dynamicAnswer nis" id="ten_percent"></div></div>
-              
-             
-            <div class="answer"><div>המוסד עמד בדרישת המקורות העצמיים בשנה קודמת</div>
-            <div class="dynamicAnswer nis" id="drishat_mekorot"></div></div>
-                
-            
-            <div class="answer"><div>סכום התמיכה אינו מוגבל ע"י שיעור התמיכה המירבי כפי שייבדק להלן</div>
-            <div class="dynamicAnswer nis" id="tmiha_mugbelet"></div></div>
-                
-             <div class="answer">        <div> סכום המקורות העצמיים שהציג בשנה הקודמת בה נתמך  2018-2019 </div>
-             <div class="dynamicAnswer nis" id="self_income_last_years"></div></div>
-            
-        
-              <div class="answer">          <div> שיעור של 75% מסכום המקורות העצמיים בשנה קודמת </div>
-              <div class="dynamicAnswer nis" id="seventy_five_percent_income_last_year"></div></div>
-             
-       
-              <div class="answer"> <div> עלות הפעילות הנתמכת המקסימלית שתוכר ע"י המשרד תהיה פי 10</div>
-              <div class="dynamicAnswer nis" id="max_tmiha_ten_times"></div></div>
-              
-               
-             <div class="answer">    <div>  שיעור התמיכה המירבי שיוכר ע"י המשרד יהיה 90% מעלות הפעילות המוכרת </div>
-             <div class="dynamicAnswer nis" id="max_tmiha_ninty_percent"></div></div>
-             
-            
-
-             
-
-        </div>
-    </form>
+                <div class="answer">
+                    <div>שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת</div>
+                    <div class="dynamicAnswer" id="office_support"></div>
+                </div>
 
 
+                <div class="answer">
+                    <div>המוסד יממן לפחות 10% מעלות הפעילות הנתמכת בסך</div>
+                    <div class="dynamicAnswer nis" id="ten_percent"></div>
+                </div>
 
+
+                <div class="answer">
+                    <div>המוסד עמד בדרישת המקורות העצמיים בשנה קודמת</div>
+                    <div class="dynamicAnswer nis" id="drishat_mekorot"></div>
+                </div>
+
+
+                <div class="answer">
+                    <div>סכום התמיכה אינו מוגבל ע"י שיעור התמיכה המירבי כפי שייבדק להלן</div>
+                    <div class="dynamicAnswer nis" id="tmiha_mugbelet"></div>
+                </div>
+
+                <div class="answer">
+                    <div> סכום המקורות העצמיים שהציג בשנה הקודמת בה נתמך 2018-2019</div>
+                    <div class="dynamicAnswer nis" id="self_income_last_years"></div>
+                </div>
+
+
+                <div class="answer">
+                    <div> שיעור של 75% מסכום המקורות העצמיים בשנה קודמת</div>
+                    <div class="dynamicAnswer nis" id="seventy_five_percent_income_last_year"></div>
+                </div>
+
+
+                <div class="answer">
+                    <div> עלות הפעילות הנתמכת המקסימלית שתוכר ע"י המשרד תהיה פי 10</div>
+                    <div class="dynamicAnswer nis" id="max_tmiha_ten_times"></div>
+                </div>
+
+
+                <div class="answer">
+                    <div> שיעור התמיכה המירבי שיוכר ע"י המשרד יהיה 90% מעלות הפעילות המוכרת</div>
+                    <div class="dynamicAnswer nis" id="max_tmiha_ninty_percent"></div>
+                </div>
+
+
+            </div>
+        </form>
+
+
+    </div>
+    <div class="center">הבהרה: על מנת לקבל את התמיכה בפועל כמובן שעל מוסד הציבור להגיש דוח ביצוע הוצאות על הסכום המבוקש
+        ולהקפיד שמימן
+        מכספו 10% מעלות הפעילות בפועל.
+        שימו לב שכחלק מההקלה החדשה בנוהל, המימון העצמי בשיעור 10% לא חייב לעמוד בהגדרה של מקורות עצמיים אלא יכול להגיע
+        גם ממקורות אחרים של מוסד הציבור כגון מענקים ציבוריים וכד'.
+    </div>
 
 </div>
-<div class="center">הבהרה: על מנת לקבל את התמיכה בפועל כמובן שעל מוסד הציבור להגיש דוח ביצוע הוצאות על הסכום המבוקש
-    ולהקפיד שמימן
-    מכספו 10% מעלות הפעילות בפועל.
-    שימו לב שכחלק מההקלה החדשה בנוהל, המימון העצמי בשיעור 10% לא חייב לעמוד בהגדרה של מקורות עצמיים אלא יכול להגיע
-    גם ממקורות אחרים של מוסד הציבור כגון מענקים ציבוריים וכד'.
-</div>
-
-
 </body>
 <script src="calc.js"></script>
 </html>
