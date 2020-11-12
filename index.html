@@ -59,7 +59,7 @@
             <tr>
                 <td><label for="max_tmiha">שיעור התמיכה המירבי שנקבע במבחן התמיכה הוא:</label></td>
                 <td><input type="number" id="max_tmiha" name="max_tmiha" min="0" max="100"></td>
-                <td>₪</td>
+                <td>%</td>
             </tr>
 
             <tr>
@@ -260,7 +260,11 @@
             <input type="button" onclick="resetForm()" value="נקה נתונים">
         </div>
         <div class="results">
-            
+             <div class="answer">
+                <div> סכום התמיכה המירבי יהיה:  </div>
+                <div class="dynamicAnswer nis" id="total"></div></div>
+
+                <div>הסבר לתהליך החישוב:</div>
                 <div class="answer">     <div>שיעור תמיכת המשרד מתוך עלות הפעילות בשנה הקודמת</div>
                 <div class="dynamicAnswer" id="office_support"></div></div>
            
@@ -292,10 +296,7 @@
              <div class="dynamicAnswer nis" id="max_tmiha_ninty_percent"></div></div>
              
             
-             <div class="answer">     
-                <div> סכום התמיכה המירבי יהיה:  </div>
-                <div class="dynamicAnswer nis" id="total"></div></div>
-        
+
              
 
         </div>
